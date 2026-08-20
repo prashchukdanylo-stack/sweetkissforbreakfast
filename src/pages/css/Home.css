@@ -31,3 +31,23 @@
 .home-footer {
     padding: 30px;
 }
+@media(max-width: 600px) {
+
+    .home-logo {
+        width: 500px;
+    }
+    .home-welcome {
+        font-size: 30px;
+    }
+    .home-description {
+        font-size: 15px;
+    }
+    .home-menu-button {
+        width: 150px;
+        height: 50px;
+        font-size: 7px;
+    }
+    .home-footer {
+        font-size: 10px;
+    }
+}
