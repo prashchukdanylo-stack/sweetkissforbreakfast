@@ -24,7 +24,8 @@ const pool = mariadb.createPool({
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  
+  connectTimeout: 20000,
+  acquireTimeout: 20000,
   ssl: process.env.DB_HOST !== 'localhost' && process.env.DB_HOST !== '127.0.0.1' 
     ? { rejectUnauthorized: false } 
     : false,
@@ -47,6 +48,6 @@ app.get("/api/products", async (req, res) => {
 
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running on port ${PORT}`);
 });
