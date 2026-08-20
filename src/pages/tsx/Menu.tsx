@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
 
 import "../css/Menu.css";
+import type {Dish} from "../../App.tsx";
+
 interface MenuProps {
-  data: object[] | null;
+  data: Dish[] | null;
 }
 
 export function Menu({ data }: MenuProps) {
@@ -23,7 +25,7 @@ export function Menu({ data }: MenuProps) {
 
       <div className="menu">
         {(data || []).map(
-          (item: { id: number; name: string; photo: string }) => (
+          (item: Dish) => (
             <div
               key={item.id}
               className="menu-item clickable-item"
@@ -36,7 +38,11 @@ export function Menu({ data }: MenuProps) {
                 alt={item.name}
                 className="menu-item-image"
               />
-              <h2>{item.name}</h2>
+              <div className="menu-item-info">
+
+              <h2 className = "menu-item-name">{item.name}</h2>
+              <h4 className="menu-item-price">{item.price}грн</h4>
+             </div>
             </div>
           ),
         )}

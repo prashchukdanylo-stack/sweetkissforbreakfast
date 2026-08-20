@@ -6,17 +6,29 @@ import { Menu } from "./pages/tsx/Menu.tsx";
 import "./App.css";
 import { Dish } from "./pages/tsx/Dish.tsx";
 
+
+export interface Dish {
+   id: number;
+    name: string;
+    photo: string;
+    description: string;
+    rating: number;
+    price: number
+
+}
 function App() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<Dish[] | null>(null);
   useEffect(() => {
-    fetch("http://localhost:3000/api/products")
+
+    const API_URL = import.meta.env.VITE_API_URL || "https://sweetkissforbreakfast.onrender.com/api";
+    fetch(`${API_URL}/products`)
       .then((response) => response.json())
-      .then((data) => setData(data))
+      .then((data : Dish[]) => setData(data))
       .catch((error) => console.error(error));
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/sweetkissforbreakfast/">
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />

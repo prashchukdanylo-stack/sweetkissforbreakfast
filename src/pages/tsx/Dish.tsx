@@ -1,12 +1,5 @@
 import "../css/Dish.css";
-
-interface Dish {
-    id: number;
-    name: string;
-    photo: string;
-    description: string;
-    rating: number;
-}
+import type { Dish } from "../../App.tsx";
 
 
 export function Dish(data: {data: Dish[] | null}) {
@@ -15,11 +8,17 @@ export function Dish(data: {data: Dish[] | null}) {
     const dish = data?.data?.find((item) => item.id === id);
 
     return (
-        <div>
-            <h1>{dish?.name}</h1>
+        <>
+        <img src = "/arrow.png" className = "back-button" onClick={() => window.history.back()}></img>
+        <div className = "dish-container">
+            <div className = "dish-info">
+            <h1 className = "dish-name">{dish?.name}</h1>
             <img src={dish?.photo} alt={dish?.name} className = "dish-image" />
-            <p> {dish?.description} </p>
-            <p>Rating: {dish?.rating}/5</p>
+            <h2 className = "dish-price">{dish?.price} грн</h2>
+            <p className = "dish-description"> {dish?.description} </p>
+            <p className = "dish-rating">Rating: {dish?.rating}/5</p>
+            </div>
         </div>
+        </>
     )
 }

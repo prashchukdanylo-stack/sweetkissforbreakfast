@@ -21,7 +21,6 @@
   background-color: #9b2d0c;
   color: white;
   height: 200px;
-  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +28,10 @@
 
 .menu-item-image {
   margin: 0 10px 0 10px;
-  width: 100%;
+  width: 40%;
   height: 80%;
   border-radius: 15px;
+}
+.menu-item-info {
+  width: 60%
 }

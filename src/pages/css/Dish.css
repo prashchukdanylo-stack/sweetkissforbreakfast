@@ -1,4 +1,48 @@
+.back-button {
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+}
+
 .dish-image {
     height: 300px;
     width: 300px;
+}
+
+.dish-info {
+    background-color: #9b2d0c;
+    border-radius: 15px;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dish-container {
+    display:flex;
+    justify-content: center;
+}
+
+.dish-name {
+    color: white;
+    font-size: 30px;
+}
+
+.dish-price {
+    color: white;
+    font-size: 20px;
+}
+
+.dush-description {
+    color: white;
+    font-size: 20px;
+}
+.dish-rating {
+    color: white;
+    font-size: 20px;
+}
+.dish-info p {
+    color: white;
+    font-size: 20px;
 }
