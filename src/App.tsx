@@ -20,8 +20,7 @@ function App() {
   const [data, setData] = useState<Dish[] | null>(null);
   useEffect(() => {
 
-    const API_URL = import.meta.env.VITE_API_URL || "https://sweetkissforbreakfast.onrender.com/api";
-    fetch(`${API_URL}/products`)
+    fetch("https://sweetkissforbreakfast.onrender.com/api/products")
       .then((response) => response.json())
       .then((data : Dish[]) => setData(data))
       .catch((error) => console.error(error));
