@@ -11,7 +11,7 @@ export function Home() {
     <>
     <div className="home-all-page">
         <div className = "home-header">
-      <img src="/logo.png" alt="Logo" className="home-logo" />
+      <img src="logo.png" alt="Logo" className="home-logo" />
       <h1 className="home-welcome">Вітаю вас у нашому ресторані!</h1>
       <h3 className="home-description">
         Ми пропонуємо найсмачніший сніданок у місті! Базилік додасть справжньої

@@ -34,7 +34,7 @@ export function Menu({ data }: MenuProps) {
               }}
             >
               <img
-                src={item.photo}
+                src={`${import.meta.env.BASE_URL}${item.photo.replace(/^\//, '')}`}
                 alt={item.name}
                 className="menu-item-image"
               />
