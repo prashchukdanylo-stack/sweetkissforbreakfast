@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import { Home } from "./pages/tsx/Home.tsx";
@@ -26,14 +26,14 @@ function App() {
   }, []);
 
   return (
-    <HashRouter basename="/sweetkissforbreakfast/">
+    <BrowserRouter basename="/sweetkissforbreakfast/">
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="menu" element={<Menu data={data} />} />
         </Routes>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
