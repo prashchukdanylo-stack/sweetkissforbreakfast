@@ -1,9 +1,41 @@
+
+.item-name {
+  font-size: 3vw;
+   margin-bottom: 0;
+   margin-top: 1vw;
+}
+
+.item-price {
+  font-size: 2vw;
+   margin-bottom: 0;
+   margin-top: 1vw;
+}
+.item-description {
+  font-size: 1.5vw;
+   margin-bottom: 0;
+   margin-top: 1vw;
+}
+
+.item-rating {
+  font-size: 1vw;
+   margin-bottom: 0;
+   margin-top: 1vw;
+}
+
+
+
 .menu-title-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   width: 100%;
   padding-bottom: 20px;
+}
+
+.menu-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-title {
@@ -26,6 +58,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
   gap: 20px;
   padding: 0 16px;
+  width: 100vw;
 }
 
 .menu-item {
@@ -69,6 +102,42 @@
   font-weight: bold;
 }
 
+.disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.item {
+  top: 5vw;
+  position: fixed;
+  background-color: #9b2d0c;
+  color: white;
+  height: 30vw;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  border-radius: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.item-image {
+  width: 15vw;
+  height: 15vw;
+
+}
+
+.cross-btn {
+  position: absolute;
+  right: 1vw;
+  width: 3vw;
+  cursor: pointer;
+}
+
 /* Мобільна адаптація */
 @media (max-width: 600px) {
   .menu-title-container {
@@ -102,4 +171,39 @@
   .menu-item-info {
     width: 60%;
   }
+
+  .item {
+    width: 60vw;
+    height: 50vw;
+  }
+
+
+.item-name {
+  font-size: 5vw;
+  
+}
+
+.item-price {
+  font-size: 4vw;
+  
+}
+.item-description {
+  font-size: 3vw;
+
+}
+
+.item-rating {
+  font-size: 2vw;
+ 
+}
+
+.item-image {
+  width: 25vw;
+  height: 25vw;
+
+}
+
+.cross-btn {
+  width: 6vw;
+}
 }
