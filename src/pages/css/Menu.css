@@ -113,7 +113,7 @@
   position: fixed;
   background-color: #9b2d0c;
   color: white;
-  height: 30vw;
+  max-height: 30vw;
   width: 40vw;
   display: flex;
   flex-direction: column;
@@ -123,6 +123,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow-y: auto;
 }
 
 .item-image {
