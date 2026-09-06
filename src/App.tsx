@@ -11,6 +11,7 @@ export interface Dish {
     name: string;
     photo: string;
     description: string;
+    category: string;
     rating: number;
     price: number
 
